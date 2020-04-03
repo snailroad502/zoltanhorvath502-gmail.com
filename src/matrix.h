@@ -1,8 +1,3 @@
-#include <iostream>
-#include <fstream>
-#include <bits/stdc++.h>
-
-
 using namespace std;
 
 template <class T> class LineVector  {
@@ -15,4 +10,14 @@ public:
     int write(ofstream&);
 };
 
+
+template <class T> class Matrix  {
+    std::vector< LineVector< T > > rows;
+    LineVector<T> operator *(LineVector<T>);
+    Matrix operator *(Matrix);
+    Matrix operator +(Matrix);
+public:
+    int read(ifstream&);
+    int write(ofstream&);
+};
 
