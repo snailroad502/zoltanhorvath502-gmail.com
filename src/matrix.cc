@@ -6,6 +6,11 @@
 
 using namespace std;
 
+
+template class Matrix<double>;
+template class LineVector<double>;
+
+
 template<class T>
 int Matrix<T>::read(ifstream& ifile)
 {
